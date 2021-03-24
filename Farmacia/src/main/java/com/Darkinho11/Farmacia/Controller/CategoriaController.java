@@ -19,7 +19,7 @@ import com.Darkinho11.Farmacia.Model.Categoria;
 import com.Darkinho11.Farmacia.Repository.CategoriaRepository;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/categoria")
 public class CategoriaController {
 	
@@ -55,4 +55,6 @@ public class CategoriaController {
 	public void delete(@PathVariable long id_categoria) {
 		catrepository.deleteById(id_categoria);
 	}
+	
+	
 }
